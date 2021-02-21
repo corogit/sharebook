@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   scope module: :user do
     get '/' => 'homes#top'
     resources :homes, only: [:top, :about]
+    resources :books
   end
 end

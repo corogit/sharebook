@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     get '/' => 'homes#top'
     resources :homes, only: [:top, :about]
     resources :books
+    resources :users
   end
 end

@@ -1,0 +1,7 @@
+<%= form_with model: @user, local: true do |f| %>
+  <h4>ニックネーム</h4>
+  <%= f.text_field :nickname %>
+  <h4>メールアドレス</h4>
+  <%= f.text_field :email %>
+  <%= f.submit '更新' %>
+ <% end %>

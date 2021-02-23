@@ -1,4 +1,6 @@
 <h1>ユーザー一覧</h1>
 <% @users.each do |user| %>
+<%= link_to user_path(user.id) do %>
   <%= user.nickname %>
+ <% end %>
 <% end %>

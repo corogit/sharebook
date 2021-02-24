@@ -5,5 +5,8 @@
   <% end %>
     <%= book.author %>
     <%= book.body %>
+  <div id="index_like_<%= book.id %>">
+    <%= render 'likes/like', book: book %>
+  </div>
 <% end %>
 <%= link_to "新規投稿", new_book_path %>

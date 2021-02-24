@@ -8,7 +8,7 @@ class User < ApplicationRecord
  has_many :likes, dependent: :destroy
 
  #既にいいねしているかどうか
- def already_liked?(item)
-   self.likes.exists?(item_id: item.id)
+ def already_liked?(book)
+   self.likes.exists?(book_id: book.id)
  end
 end

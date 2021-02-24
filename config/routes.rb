@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   scope module: :user do
     get '/' => 'homes#top'
     resources :homes, only: [:top, :about]
-    resources :books
     resources :users
+    resources :books do
+      resources :likes, only: [:create, :destroy]
+    end
   end
 end

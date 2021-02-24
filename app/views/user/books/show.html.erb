@@ -13,5 +13,8 @@
       <%= @book.author %>
     </td>
   </tr>
+  <div id="show_like_<%= @book.id %>">
+  <%= render 'likes/like', book: @book %>
+  </div>
 </table>
 <%= link_to "一覧へ", books_path %>

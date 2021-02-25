@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     resources :books do
       resources :likes, only: [:create, :destroy]
     end
+    resources :notifications, only: :index
   end
 end

@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   
   scope module: :user do
     get '/' => 'homes#top'
+    root to: "homes#top"
+    resources :notifications, only: :index
     resources :homes, only: [:top, :about]
     resources :users
     resources :books do
       resources :likes, only: [:create, :destroy]
     end
-    resources :notifications, only: :index
   end
 end

@@ -4,19 +4,14 @@
     <title>Sharebook</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <%= render 'layouts/header' %>
   <body>
-    <%= render 'layouts/header' %>
-    <% if unchecked_notifications.any? %>
-      <i class="fa fa-circle" style="color: gold;"></i>
-    <% end %>
-    <li>
-      <%= link_to "NOTICE", notifications_path, class: "btn-default" %>
-    </li>
+    
     <%= yield %>
   </body>
 </html>

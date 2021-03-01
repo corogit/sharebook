@@ -18,6 +18,9 @@ class User::BooksController < ApplicationController
   
   def show
     @book = Book.find(params[:id])
+    @comment = Comment.new
+    #新着順で表示
+    @comments = @item.comments.order(created_at: :desc)
   end
   
   def edit
